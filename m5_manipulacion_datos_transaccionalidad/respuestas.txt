@@ -1,0 +1,47 @@
+1) ¿Cuántos registros hay?
+select count(*) from inscritos;
+
+Hay 16 registros
+
+
+
+
+
+2) ¿Cuántos inscritos hay en total?
+select sum(cantidad) from inscritos;
+
+Hay 774 inscritos en total
+
+
+
+3) ¿Cuál o cuáles son los registros de mayor antigüedad?
+
+Los 2 registros de mayor antiguedad se puede consultar de la siguiente manera:
+
+select * from inscritos
+order by fecha desc
+limit 2;
+
+
+
+4) ¿Cuántos inscritos hay por día? (entendiendo un día como una fecha distinta de ahora en adelante)
+
+
+Se puede consultar de la siguiente forma:
+
+select fecha, sum(cantidad) from inscritos
+group by fecha
+order by fecha;
+
+
+
+
+
+5) ¿Qué día se inscribieron la mayor cantidad de personas y cuántas personas se inscribieron en ese día?
+
+El día 01 de agosto de 2021 se inscribieron más personas y se puede consultar con el siguiente código:
+
+select fecha, sum(cantidad) as suma_cantidad from inscritos
+group by fecha
+order by suma_cantidad desc
+limit 1;
