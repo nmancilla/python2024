@@ -1,2 +1,2 @@
 # python2024
-desafios por entregar para el curso de talento digital 
+Desafios curso de talento digital, apuntes python y mas  
