@@ -1,0 +1,38 @@
+Ambiente virtual:
+
+Crear:                                  python -m venv nombre
+Activar:		                        source nombre/bin/activate
+Consultar librerías del ambiente:	    pip freeze
+borrar ambiente:                    	rm -rf buscador/
+Salir de amb:		                	deactivate
+
+Crea los requeremientos:        pip freeze > requierments.txt
+Instalar los requeremientos:    pip install -r requierments.txt
+
+Instalar la ultima dependencia:     pip install django
+Instalar una dependencia puntal:    pip install django==3.2.4
+Instalar versión menor a 3:         pip install "django<3"
+
+
+
+
+Uso Variables de entorno:
+
+1. Instalar la librería dotenv:
+    pip install python-dotenv
+
+2. Crear archivo .env y agregar variables de entorno ( API_KEY=123456 )
+
+3. Recordar ocular en .gitignore
+
+5. En Python:
+
+import os
+from dotenv import load_dotenv
+load_dotenv()  # Carga las variables de entorno del archivo .env
+
+api_key = os.getenv('API_KEY') # Asignando a la variables 
+
+
+Revisar código:
+import pdb; pdb.set_trace()
